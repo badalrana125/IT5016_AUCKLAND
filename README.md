@@ -1,10 +1,19 @@
+"""
+Description: A program to collect user information
+Author: Aashish Sagar Basyal
+"""
+
+#Collect the user informations
 def collect_user_information(id_counter):
     user_name = input("ENTER THE NAME OF THE STUDENT:")
     user_age = input("Enter the age of the student:")
     user_email = input("Enter the email of the student:")
 
+#To generate unique id
   unique_id = id_counter+1
   id_counter = unique_id
+
+#to display
   print("User Information")
   print(f"Name:{user_name}")
   print(f"Age: {user_age}")
@@ -53,6 +62,7 @@ def create_detailed_report(id_counter,user_name, user_age,user_email,tot_amount,
   print(f"Category:{category}")
   print(f"Recommendation :{recommendation}")
 
+ # Main function to execute the program
 def main():
     id_counter = 5000
     id_counter, user_name , user_age, user_email = collect_user_information(id_counter)
