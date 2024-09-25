@@ -63,10 +63,8 @@ main()
 
 ____Software Development Principles and explanation related to my code:
 
-1. DRY (Don't Repeat Yourself)
-Principle: Do not repeat the same code as it creates several instances of the same logic for its execution.
-In the code: Some of the segments of codes that could be improved include The print() statements that convey user information could be encapsulated in a different function to save on time instead of being repeated. For example, it is better to create a function known as print_user_info() that will help in avoiding repetition when printing user details.
-Improvement:
+1.DRY (Don't Repeat Yourself):
+I strongly avoid repeated writing my code. For example, I saw that I was printing user information repeatedly from various parts of a program. To address this, I came up with another function called print_user_info(). Thus, instead of having to rewrite the same print statements all over the code, I can control how the user details are presented from one place easily. It is useful because it keeps my code cleaner and more efficient.
 def print_user_info(user_name, user_age, user_email, id_counter):def print_user_info(user_name, user_age, user_email, id_counter):
 print("User Information")
 print(f"Name: {user_name}")
@@ -74,25 +72,20 @@ print(f"Age: {user_age}")
 print(f"Email: {user_email}")
 print(f"Unique ID: {id_counter}")
 
-2. KISS is actually an acronym for ‘Keep It Simple, Stupid’.
-Principle: The code must be simple; just as simple as possible. Do not pack each function with features, and steps to complete the job, instead make every function clean and basic.
-In the code: There is no significant overlapping of tasks in your code and each function, what you have is the representation of this principle. But it would become necessary to make certain that you do not add many conditions or unnecessarily complicate it while extending it.
-3. Single Responsibility Principle (SRP)
-Principle: Single Responsibility Principle: Every function or class should do only one thing or be change for only one reason.
-In the code: All the functions you have defined (collect_user_information, calculate_total_amount, categorize_request, create_detailed_report) have simple and clear purpose, which is perfect. Here there is no problem you are following the SRP in the most proper manner.
+2.KISS (Keep It Simple, Stupid):
+The best strategy I have learned and adapted is simplicity. That is why I want each function to be clear and serve only one purpose. I understand that it’s unproductive to give them several tasks at once; instead, all the tasks serve a specific function. As a result, using such names helps me in reading my own code since it is well arranged as well as easy to understand when making additions or changes in future.
 
-4. Separation of Concerns
-Principle: There should be conceivably corresponding division of labors and responsibilities in the different sections of the code such that issues and functionalities are handled uniquely and do not overlap.
-In the code: You have split input collection, amount calculation, request categorisation and report generation in to different functional areas as per this principle. This makes the make the code more manageable for testing and maintenance.
+3.Single Responsibility Principle (SRP):
+You see, nothing in any function I write does anything but one particular thing. For instance, the function collect_user_information() is only responsible for collecting the information of the user and calculate_total_amount() is only responsible for calculating total amounts. Such division of responsibilities serves to prevent the confusion as well as to simplify the process of debugging or improving a specific segment in the code, if necessary.
 
-5. YAGNI means You Aren’t Gonna Need It or there is no need to build something unless it is needed.
-Principle: Never build features unless it’s indispensable to do so. Always remember to not put in things that are not needed at the present time such as adding features or putting in a logic.
-In the code: This principle does not pose any problems to your code since all the logic carried in it seems to be useful in one way or the other.
+4.Separation of Concerns:
+I have separated my code into an easily understandable structure where two functions don’t overlap. I decompose the sets of input collection, calculation, categorization, and reporting into different functions to ease my ability in managing and testing them. This way there is no hazy area that I can’t identify if something is wrong or needs some change.
 
-6.Open/Closed Principle (OCP) Summary
-The Open/Closed Principle ensures that code is designed to be easily extended with new features without altering the existing functionality. This keeps the core stable and reduces the risk of introducing bugs.
+5.YAGNI (You Aren't Gonna Need It):
+I try to keep telling myself not to complicate the situation anymore than it is already that is another thing that I need to ensure that I do not introduce unnecessary features. I try to develop what for the present functionality is necessary. This particular principle is useful in that it keeps me from deviating from the objective and over-complicating my code needlessly.
 
+6.Open/Closed Principle (OCP):
+My code is a perfect paradigm for a future-oriented approach. It’s designed to allow me to make modifications and unleash new features while not affecting the other ones. For instance, should I wish to add new fields into collect_user_information() function the extension is very easy. In the same respect, if I desire to incorporate the functionality to add new categories in the categorize_request() function, I can easily include that without manipulation of that which exists. This makes my code more dynamic for future calls.
 In my code:
-
 Extending the collect_user_information() function to collect new fields (like address or phone) without changing its original structure.
 Adding new categories in categorize_request() by introducing additional conditions without modifying the existing logic.
