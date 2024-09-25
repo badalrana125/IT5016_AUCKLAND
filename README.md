@@ -89,3 +89,10 @@ In the code: You have split input collection, amount calculation, request catego
 Principle: Never build features unless it’s indispensable to do so. Always remember to not put in things that are not needed at the present time such as adding features or putting in a logic.
 In the code: This principle does not pose any problems to your code since all the logic carried in it seems to be useful in one way or the other.
 
+6.Open/Closed Principle (OCP) Summary
+The Open/Closed Principle ensures that code is designed to be easily extended with new features without altering the existing functionality. This keeps the core stable and reduces the risk of introducing bugs.
+
+In my code:
+
+Extending the collect_user_information() function to collect new fields (like address or phone) without changing its original structure.
+Adding new categories in categorize_request() by introducing additional conditions without modifying the existing logic.
